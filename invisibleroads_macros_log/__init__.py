@@ -7,7 +7,6 @@ from os.path import expanduser
 
 
 INDENT = ' ' * 2
-HOME_FOLDER_SHORT_PATH = '%UserProfile%' if os.name == 'nt' else '~'
 DATESTAMP_TEMPLATE = '%Y%m%d'
 TIMESTAMP_TEMPLATE = DATESTAMP_TEMPLATE + '-%H%M'
 
@@ -36,7 +35,7 @@ def format_summary(value_by_key, suffix_format_packs=None):
 
 
 def format_path(x):
-    return re.sub(r'^' + re.escape(expanduser('~')), HOME_FOLDER_SHORT_PATH, x)
+    return re.sub(r'^' + re.escape(expanduser('~')), '~', x)
 
 
 def format_nested_dictionary(
