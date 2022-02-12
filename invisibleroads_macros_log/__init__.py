@@ -35,7 +35,7 @@ def format_summary(value_by_key, suffix_format_packs=None):
 
 
 def format_path(x):
-    return re.sub(r'^' + re.escape(expanduser('~')), '~', x)
+    return re.sub(r'^' + re.escape(expanduser('~')), '~', str(x))
 
 
 def format_nested_dictionary(
