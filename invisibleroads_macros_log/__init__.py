@@ -8,6 +8,7 @@ from os.path import expanduser
 INDENT = ' ' * 2
 DATESTAMP_TEMPLATE = '%Y%m%d'
 TIMESTAMP_TEMPLATE = DATESTAMP_TEMPLATE + '-%H%M'
+LONGSTAMP_TEMPLATE = TIMESTAMP_TEMPLATE + '%S-%f'
 
 
 def get_log(name):
